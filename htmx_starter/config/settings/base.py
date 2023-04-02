@@ -73,12 +73,14 @@ THIRD_PARTY_APPS = [
     "django_htmx",
     'tailwind',
     'tailwind_theme',
+    'django_browser_reload',
     "crispy_forms",
     "crispy_bootstrap5",
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
 ]
+TAILWIND_APP_NAME = 'tailwind_theme'
 
 LOCAL_APPS = [
     "htmx_starter.users",
@@ -135,6 +137,7 @@ MIDDLEWARE = [
     "django.contrib.sessions.middleware.SessionMiddleware",
     "django.middleware.locale.LocaleMiddleware",
     "django_htmx.middleware.HtmxMiddleware",
+    "django_browser_reload.middleware.BrowserReloadMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
