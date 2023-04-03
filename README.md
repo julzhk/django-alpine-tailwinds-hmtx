@@ -8,22 +8,27 @@ faststart htmx + tailwindcss + django + postgres + docker template
 see the readme in the dango project for more info
 
 To set up:
-* Check in the initial commit for the .env file
+* Check in the initial commit 
 * use pyenv to get python 3.11
 * install requirements
-* decide your project name:
-* let's swap out the project name for your project name
-* we'll write it like this <htmx_starter> from here on 
+* decide your project name &  swap out the project name for your project name. we'll write it like this <project> from here on 
 
-* create a database called <htmx_starter> using:
-  `createdb <htmx_starter>
+## Rename project:
+* rename the project & the project folder - do pycharm 'rename' on the project folder
+* rename the htmx_starter django app
+* do search and replace for 'htmx_starter' and replace with your project name
+
+* create a database called <project> using:
+`createdb <project>
 * create a .env file with (minimally)
-  `DATABASE_URL=postgres://127.0.0.1:5432/<htmx_starter>`
-
+`DATABASE_URL=postgres://127.0.0.1:5432/<project>`
 
 ## Other handy commands:
-* taiwind start for monitor - use safari: less caching
-
+* manage.py migrate
+* manage.py tailwind install
+* tailwind start for monitor - use safari: less caching
+* edit the run config to use the proper working directory
+* set 'template language' to 'django' in the settings: langugaes and frameworks  / template language -> django
 
 ## Settings
 
@@ -45,7 +50,7 @@ For convenience, you can keep your normal user logged in on Chrome and your supe
 
 Running type checks with mypy:
 
-    $ mypy htmx_starter
+    $ mypy <project>
 
 ### Test coverage
 
